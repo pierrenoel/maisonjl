@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Maison J&L | Carte Brunch & Cocktails</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"/>
+
+        <!-- Tailwind -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <style>
+            :root {
+                --cream-bg: #f9f6f0;
+                --dark-text: #584738;
+                --gold-light: #d4af7f;
+                --accent-bg: #f2ede4;
+            }
+            body {
+                font-family: "Lora", serif;
+                background-color: var(--cream-bg);
+                color: var(--dark-text);
+            }
+            .playfair {
+                font-family: "Playfair Display", serif;
+            }
+            .gold-gradient {
+                background: linear-gradient(180deg, #c5a059 0%, #8e6d3a 100%);
+            }
+            .menu-item {
+                padding: 0.75rem 0;
+                border-bottom: 1px solid #e6e6e6ff;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <nav
+            class="relative bg-white/50 backdrop-blur-sm border-b border-[#E5DEC1] sticky top-0 z-50">
+            <div class="max-w-3xl mx-auto px-6">
+
+                <!-- Desktop nav -->
+                <div
+                    class="hidden md:flex justify-between items-center py-8 text-sm uppercase tracking-[0.2em]">
+                    <div class="flex gap-12">
+                        <a href="index.html" class="hover:opacity-50 transition">Accueil</a>
+                        <a href="index.html#galerie" class="hover:opacity-50 transition">Galerie</a>
+                        <a href="menu.html" class="hover:opacity-50 transition">Menu</a>
+                    </div>
+
+                    <!-- Logo centered -->
+                    <img src="assets/logo.jpeg" class="w-14" alt="logo"/>
+
+                    <div class="flex gap-12">
+                        <a href="index.html#propos" class="hover:opacity-50 transition">À propos</a>
+                        <a href="index.html#contact" class="hover:opacity-50 transition">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile nav -->
+                <div class="flex md:hidden justify-between items-center py-6">
+                    <!-- Logo -->
+                    <img src="assets/logo.jpeg" class="w-14" alt="logo"/>
+
+                    <!-- Burger -->
+                    <button
+                        id="burger"
+                        class="flex flex-col justify-between w-6 h-5 relative group">
+                        <span
+                            class="block h-0.5 w-full bg-[#584738] transition-all duration-300 origin-center group-open:rotate-45 group-open:translate-y-2.5"></span>
+                        <span
+                            class="block h-0.5 w-full bg-[#584738] transition-all duration-300 group-open:opacity-0"></span>
+                        <span
+                            class="block h-0.5 w-full bg-[#584738] transition-all duration-300 origin-center group-open:-rotate-45 group-open:-translate-y-2.5"></span>
+                    </button>
+                </div>
+
+                <!-- Mobile menu -->
+                <div
+                    id="mobileMenu"
+                    class="hidden flex-col mt-4 md:hidden overflow-hidden transition-all duration-500">
+                    <a href="index.html" class="block p-3 hover:bg-[#E5DEC1] transition">Accueil</a>
+                    <a href="index.html#galerie" class="block p-3 hover:bg-[#E5DEC1] transition">Galerie</a>
+                    <a href="menu.html" class="block p-3 hover:bg-[#E5DEC1] transition">Menu</a>
+                    <a href="index.html#propos" class="block p-3 hover:bg-[#E5DEC1] transition">À propos</a>
+                    <a href="index.html#contact" class="block p-3 hover:bg-[#E5DEC1] transition">Contact</a>
+                </div>
+
+            </div>
+        </nav>
+        <!-- HERO -->
+        <header
+            class="relative h-[60vh] flex items-center justify-center text-center overflow-hidden">
+            <img
+                src="assets/brunch.jpeg"
+                class="absolute inset-0 w-full h-full object-cover parallax-img"
+                alt="Brunch"/>
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <div class="relative z-10 text-white px-6">
+                <p class="uppercase tracking-[0.4em] text-xs mb-6">Notre carte</p>
+                <h1 class="playfair text-6xl md:text-7xl italic mb-8">
+                    Brunch & Cocktails
+                </h1>
+                <div class="w-16 h-px bg-white/60 mx-auto"></div>
+            </div>
+        </header>
+
+        <!-- INTRO -->
+        <section class="py-24 px-6 text-center max-w-4xl mx-auto" data-aos="fade-up">
+            <p class="italic text-[#B5A48B] uppercase tracking-widest text-sm mb-8">
+                Une expérience à partager
+            </p>
+            <h2 class="playfair text-2xl md:text-3xl italic leading-relaxed">
+                Pour prolonger l’expérience, nous proposons également un coin d’épicerie fine,
+                composé de produits issus d’artisans belges.
+            </h2>
+             <div class="mt-10 flex justify-center">
+                <img src="assets/cocktail.png" alt="cocktail"/>
+            </div>
+        </section>
+
+        <!-- BRUNCH -->
+        <section id="brunch" class="container mx-auto px-6 py-24">
+            <div class="text-center mb-16">
+                <p class="italic text-[#B5A48B] uppercase tracking-widest text-sm">
+                    Une parenthèse gourmande
+                </p>
+                <h2 class="playfair text-5xl mt-2 italic">Brunch</h2>
+                <div class="w-16 h-px bg-[#B5A48B] mx-auto mt-6"></div>
+            </div>
+
+            <!-- Brunch Menu Grid -->
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Toasts -->
+                <div class="menu-item flex justify-between">
+                    <p>Toasts poulet mariné, stracciatella et pistaches</p>
+                    <span class="italic">8,5€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>Toasts saumon fumé, avocat, fromage blanc citronné et aneth</p>
+                    <span class="italic">8,5€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>Forestier de pleurotes, crème à l’ail et parmesan</p>
+                    <span class="italic">8,5€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>“Toasts” de butternut, chèvre chaud, miel et noix</p>
+                    <span class="italic">14€</span>
+                </div>
+
+                <!-- Soupes -->
+                <div class="menu-item flex justify-between">
+                    <p>Velouté de potimarron aux châtaignes et éclats de noisettes</p>
+                    <span class="italic">14€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>Velouté de brocoli, pomme de terre et ail</p>
+                    <span class="italic">14€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>Velouté de topinambour, poireau et noix de muscade</p>
+                    <span class="italic">12€</span>
+                </div>
+
+                <!-- Salades -->
+                <div class="menu-item flex justify-between">
+                    <p>Salade, avocat, agrumes, graines et vinaigrette maison</p>
+                    <span class="italic">12€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>
+                        Salade, pomme de terre, lardons, œuf mollet et fromage à raclette
+                    </p>
+                    <span class="italic">15€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>
+                        Salade, gouda en cube, pommes, pignons de pin, vinaigrette maison moutardée
+                    </p>
+                    <span class="italic">14€</span>
+                </div>
+
+                <!-- Oeufs -->
+                <div class="menu-item flex justify-between">
+                    <p>Méditerranéen, burrata, avocat, tomates séchées</p>
+                    <span class="italic">12€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>Nordique, endives poêlées, saumon fumé et aneth</p>
+                    <span class="italic">15€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>
+                        Truffée, œufs à la truffe, carottes poêlées, pomme de terre au four
+                    </p>
+                    <span class="italic">18€</span>
+                </div>
+
+                <!-- Coins sucrés -->
+                <div class="menu-item flex justify-between">
+                    <p>
+                        Tarte du moment, à base de sucre de coco, crème entière et amaretto
+                    </p>
+                    <span class="italic">10€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>Mousse du moment</p>
+                    <span class="italic">12€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>Pancakes fluffy, sirop d’érable, crème fraîche et fruits</p>
+                    <span class="italic">6€</span>
+                </div>
+                <div class="menu-item flex justify-between">
+                    <p>Yaourt et granola</p>
+                    <span class="italic">8€</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- COCKTAILS -->
+        <section id="cocktails" class="bg-[#F2EDE4] py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="italic text-[#B5A48B] uppercase tracking-widest text-sm">
+                        L’art de la mixologie
+                    </p>
+                    <h2 class="playfair text-5xl mt-2 italic">Cocktails</h2>
+                    <div class="w-16 h-px bg-[#B5A48B] mx-auto mt-6"></div>
+                </div>
+
+                <!-- Cocktails Grid -->
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div class="menu-item flex justify-between">
+                        <p>Martini</p>
+                        <span class="italic">10€</span>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <p>Maison J&L</p>
+                        <span class="italic">14€</span>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <p>Negroni</p>
+                        <span class="italic">12€</span>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <p>Espresso Martini</p>
+                        <span class="italic">14€</span>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <p>Mimosa</p>
+                        <span class="italic">10€</span>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <p>Bellini</p>
+                        <span class="italic">10€</span>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <p>L’Insoumise</p>
+                        <span class="italic">10€</span>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <p>Gruet Blonde de Blanc</p>
+                        <span class="italic">15€</span>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <p>Prosecco</p>
+                        <span class="italic">9€</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COCKTAILS -->
+        <section id="cocktails" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="italic text-[#B5A48B] uppercase tracking-widest text-sm">
+                        Différentes boissons
+                    </p>
+                    <div class="w-16 h-px bg-[#B5A48B] mx-auto mt-6"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto my-20">
+                    <h3 class="playfair text-3xl mb-6 italic">Softs</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="menu-item flex justify-between">
+                            <p>Coca-cola original/zero</p>
+                            <span class="italic">3,5€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Fanta orange/citron</p>
+                            <span class="italic">3,5€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Ice Tea original/pêche</p>
+                            <span class="italic">3,5€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Jus d'orange</p>
+                            <span class="italic">3,5€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Jus de pomme</p>
+                            <span class="italic">3,5€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Jus d'ananas</p>
+                            <span class="italic">3,5€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Eau plate / Eau pétillante 0,5</p>
+                            <span class="italic">5€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto my-20">
+                    <h3 class="playfair text-3xl mb-6 italic">Boissons chaudes</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="menu-item flex justify-between">
+                            <p>Espresso</p>
+                            <span class="italic">3€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Double Espresso</p>
+                            <span class="italic">3,5€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Café</p>
+                            <span class="italic">3,5€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Thé (choix selon l'arrivage)</p>
+                            <span class="italic">4€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Café latte</p>
+                            <span class="italic">5€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Cappuchino</p>
+                            <span class="italic">5€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Chocolat chaud</p>
+                            <span class="italic">5€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto my-20">
+                    <h3 class="playfair text-3xl mb-6 italic">Vins (verre / bouteille)</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="menu-item flex justify-between">
+                            <p>Dom. Fond de Croze Vaison Romaine Mozaik - Rouge</p>
+                            <span class="italic">8€/30€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Tibero Montepulciano d'Abruzzo - Rouge</p>
+                            <span class="italic">8€/30€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Ca Rossa Nebbiolo Funsu - Rouge</p>
+                            <span class="italic">10€ / 45€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Vigneron St-Tropez Gourmandise Rosé - Rosé</p>
+                            <span class="italic">7€/25€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Villa Calicantus Chiarotto Bardo Rosato - Rosé</p>
+                            <span class="italic">8€/30€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Vin de Liège les Agapes - Rosé</p>
+                            <span class="italic">8€/30€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Chardonanay Ardéchenois Amandier - Blanc</p>
+                            <span class="italic">8€/30€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Pinot gris domaine Bott-Geyl - Blanc</p>
+                            <span class="italic">10€/45€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Ronchi Di Cialla Ribolla Gialla - Blanc</p>
+                            <span class="italic">10€/45€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Vin de Liège les Eolides - Blanc</p>
+                            <span class="italic">8€/30€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto my-20">
+                    <h3 class="playfair text-3xl mb-6 italic">Bulles (bouteilles)</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="menu-item flex justify-between">
+                            <p>Procecco extra dry</p>
+                            <span class="italic">45€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>L'insoumise vin belge</p>
+                            <span class="italic">50€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Champagne gruet blanc de blanc</p>
+                            <span class="italic">90€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto mt-20">
+                    <h3 class="playfair text-3xl mb-6 italic">Digestifs</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="menu-item flex justify-between">
+                            <p>Amaretto</p>
+                            <span class="italic">7€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Limoncello</p>
+                            <span class="italic">7€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Bailey's</p>
+                            <span class="italic">7€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Armagnac</p>
+                            <span class="italic">9€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Rhum brun</p>
+                            <span class="italic">9€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Poire Willimans</p>
+                            <span class="italic">10€</span>
+                        </div>
+                        <div class="menu-item flex justify-between">
+                            <p>Cognac</p>
+                            <span class="italic">15€</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-24 text-center">
+            <h2 class="playfair text-3xl italic mb-10">Une expérience à partager</h2>
+            <a
+                href="index.html#contact"
+                class="inline-block gold-gradient text-white px-10 py-4 playfair italic text-lg shadow-lg hover:opacity-90 transition">
+                Je réserve une table
+            </a>
+            <p class="text-xs opacity-60 mt-6 italic">Prix nets – service compris</p>
+        </section>
+
+        <footer class="bg-white py-20 border-t border-[#D0C8BA]">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div class="text-center md:text-left">
+                    <h3 class="playfair text-4xl mb-6">Maison J&L</h3>
+                    <p class="text-sm opacity-80 mb-8">
+                        Espace Delalieux 1B, 1400 Nivelles
+                    </p>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a
+                            href="#"
+                            class="bg-[#584738] text-white px-4 py-2 text-[10px] uppercase tracking-widest hover:bg-[#8E6D3A] transition">Facebook</a >
+                        <a
+                            href="#"
+                            class="bg-[#584738] text-white px-4 py-2 text-[10px] uppercase tracking-widest hover:bg-[#8E6D3A] transition">Instagram</a >
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <h4
+                        class="font-bold uppercase tracking-widest text-xs mb-6 pb-2 border-b border-[#F2EDE4]">
+                        Horaires
+                    </h4>
+                    <p class="text-sm leading-loose">
+
+                        <p>Lundi fermé</p>
+                        <p>Mardi fermé</p>
+
+                        <p>Mercredi de 10H à 18H</p>
+                        <p>Jeudi de 10H à 18H</p>
+                        <p>Vendredi de 10H à 21H</p>
+                        <p>Samedi de 10H à 21H</p>
+                        <p>Dimanche de 11H à 16H
+                        </p>
+
+                    </p>
+                </div>
+                <div class="text-center md:text-left">
+                    <h4
+                        class="font-bold uppercase tracking-widest text-xs mb-6 pb-2 border-b border-[#F2EDE4]">
+                        Contact
+                    </h4>
+                    <p class="text-sm leading-loose">
+                        Maisonjl.info@gmail.com<br/>
+                        +32 67 33 06 60
+                    </p>
+                </div>
+            </div>
+            <p
+                class="text-center text-[10px] uppercase tracking-[0.3em] mt-20 opacity-40 italic">
+                © 2026 Maison J&L. Tous droits réservés.
+            </p>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            lucide.createIcons();
+            AOS.init({
+                duration: 1000, // Vitesse de l'animation (1s)
+                once: true, // L'animation ne se joue qu'une seule fois
+            });
+
+            const images = document.querySelectorAll('.parallax-img');
+            new simpleParallax(images, {
+                delay: .6,
+                transition: 'cubic-bezier(0,0,0,1)'
+            });
+                        const burger = document.getElementById('burger');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            burger.addEventListener('click', () => {
+                // Toggle burger animation
+                burger
+                    .classList
+                    .toggle('group-open');
+
+                // Toggle menu with animation
+                if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
+                    mobileMenu.style.maxHeight = '0px';
+                    setTimeout(() => mobileMenu.classList.add('hidden'), 300); // cacher après animation
+                } else {
+                    mobileMenu
+                        .classList
+                        .remove('hidden');
+                    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                }
+            });
+        </script>
+    </body>
+</html>
